@@ -1,0 +1,67 @@
+<head>
+  <title>Example Sample</title>
+</head>
+
+<body>
+
+    {{>upload}}
+  {{> home}}
+    
+</body>
+
+
+<template name="home">
+  
+    <div class="template-home">
+  
+        <br>
+        
+        
+       
+            
+        <table class="table table-bordered table-hover table-striped">
+    <!-- Column heads --> 
+<thead>
+    
+    <th>IMAGE REFERENCE </th>    
+    <th>TYPE </th>  
+    <th>STORE NAME </th>  
+    <th>STORE STATUS </th>  
+    <th>ADDRESS </th>  
+    <th>TELEPHONE </th>  
+    <th>CONTACT NAME </th>  
+    <th>VENDOR NAME </th>  
+    <th>MATERIAL </th>
+    <th>FRAME QTY </th>
+    <th>IMAGE FOR USE </th>
+    <th>TYPE OF BOX </th>
+    <th>TYPE OF LIGHTBOX </th>
+    <th>CUTSIZE - WIDTH MM </th>
+    <th>CUTSIZE - HEIGHT MM </th>
+    <th>VISIBLE SIZE - WIDTH MM  </th>
+    <th>VISIBLE SIZE - HEIGHT MM </th>
+    <th>SALES NOTES </th>
+    <th>SPECIAL INSTRUCTION </th>
+    <th>INSTALLATION </th>
+    <th>VAT NUMBER </th>
+    <th>COST CENTRE </th>
+    <th>INSTALLER COMMENTS </th>
+    <th>DESCRIPTION </th>
+    
+</thead>    
+ 
+</table>
+           
+    </div>        
+</template>
+
+
+<template name="upload">
+  <h4 class="page-header">Upload a CSV</h4>
+
+  {{#unless uploading}}
+    <input type="file" name="uploadCSV">
+  {{else}}
+    <p><i class="fa fa-spin fa-refresh"></i> Uploading files...</p>
+  {{/unless}}
+</template>
